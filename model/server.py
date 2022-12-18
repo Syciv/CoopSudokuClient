@@ -57,6 +57,6 @@ class Server:
         data = json.loads(response.read().decode('utf-8'))
         result = []
         for service in data:
-            result.append(f'{service["Address"]}:{service["ServicePort"]}')
+            result.append(f'{service["ServiceAddress"]}:{service["ServicePort"]}')
         return result
 
